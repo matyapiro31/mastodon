@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.4",
+    "pg": "^7.3.0"
+  },
+  "name": "mastodon_extension",
+  "version": "1.0.0",
+  "description": "mastodon extensive api package.",
+  "main": "apiv2.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "eval \"$(cat mastodon.env 2>/dev/null)\"&&node apiv2.js",
+    "createsql": "eval \"$(mastodon.env 2>/dev/null)\"&&psql -f create.sql ${DATABASE_URL:-mastodon@localhost:5432/mastodon_production}",
+    "test": "eval \"$(mastodon.env 2>/dev/null)\"&&node test-apiv2.js"
+  },
+  "keywords": [
+    "mastodon"
+  ],
+  "author": "Akira Nakagawa <matyapiro31@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matyapiro31/mastodon_extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matyapiro31/mastodon_extension/issues"
+  },
+  "homepage": "https://github.com/matyapiro31/mastodon_extension"
+}
